@@ -1,5 +1,7 @@
 ---
 layout: home
+translated_page_id: /pt
+lang: en
 header:
   title: YOUR FAVORITE SOURCE OF FREE BOOTSTRAP THEMES
   text: >

@@ -1,0 +1,19 @@
+en:
+  about: "About"
+  services: "Services"
+  members: "Members"
+  history: "History"
+  contacts: "Contacts"
+  links: "Links"
+  switch_language: "🇵🇹"
+  switch_url: "/pt"
+
+pt:
+  about: "Sobre Nós"
+  services: "Serviços"
+  members: "Membros"
+  history: "História"
+  contacts: "Contactos"
+  links: "Links Úteis"
+  switch_language: "🇺🇸"
+  switch_url: "/"
