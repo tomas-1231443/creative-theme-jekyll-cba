@@ -1,12 +1,18 @@
-<section id="{{ section.section_id }}" class="page-section {{ section.background_style }}">
-  <div class="container px-4 px-lg-5 text-center">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-lg-8 col-xl-6 {{ section.text_style | default: 'text-center' }}">
-        <h2 class="text-white mt-0 text-center">{{ section.title }}</h2>
-        <hr class="divider border border-2 border-white ">
-        <div class="text-white-50 mb-4 ">{{ section.text | markdownify }}</div>
+<section id="{{ section.section_id }}" class="page-section {{ section.background_style }} py-5">
+  <div class="container px-4 px-lg-5 text-center text-white">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+        <h1 class="fw-bold display-4 mt-3 mb-4">
+          {{ section.title }}
+        </h1>
+
+        <p class="lead text-white-75 mb-5 px-lg-5">
+          Na <strong>CBA</strong>, ajudamos líderes e equipas a focarem-se no essencial,
+          fornecendo soluções inovadoras em contabilidade, tecnologia e gestão — tudo para acelerar resultados reais.
+        </p>
+
+        {% include actions.html actions=section.actions %}
       </div>
     </div>
-    {% include actions.html actions=section.actions %}
   </div>
 </section>

@@ -4,16 +4,10 @@
 # run. So please, fill in any custom menu entry here.
 header:
 - id: about
-  url: /#about
+  url: /#
 - id: services
   url: /#services
-- id: members
-  url: /#members
-- id: history
-  url: /#timeline
-- id: contacts
-  url: /#contacts
-- id: links
-  url: /links
+- id: area
+  url: /login
 - id: switch_language
   url: /pt

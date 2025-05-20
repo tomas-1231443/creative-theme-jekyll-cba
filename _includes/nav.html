@@ -2,13 +2,17 @@
     <div class="container px-4 px-lg-5">
         {% assign lang = page.lang | default: site.lang %}
         {% assign page_id = page.translated_page_id | default: "/"%}
-        <a class="navbar-brand" href="{% if lang == 'en' %}/#page-top{% else %}/pt#page-top{% endif %}">{{ site.title }}</a>
+        <a class="navbar-brand d-flex align-items-center" href="{% if lang == 'pt' %}/#page-top{% else %}/en#page-top{% endif %}">
+            <img src="/assets/img/cba-icon-branco.png" class="logo logo-white" alt="CBA Logo White" />
+            <img src="/assets/img/cba-icon-preto.png" class="logo logo-black" alt="CBA Logo Black" />
+            <span class="ms-2">{{ site.title }}</span>
+        </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
                 {% for item in site.data.menus.header  %}
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="{% if item.id == 'switch_language' %}{{ page_id }}{% else %}{% if lang == 'en' %}{{ item.url }}{% else %}{% if item.id == 'links' %}{{ item.url }}.pt{% else %}/pt{{ item.url | remove_first: '/' }}{% endif %}{% endif %}{% endif %}">{{ site.data.translations[lang][item.id] }}</a>
+                    <a class="nav-link js-scroll-trigger" href="{% if item.id == 'switch_language' %}{{ page_id }}{% else %}{% if lang == 'pt' %}{{ item.url }}{% else %}{% if item.id == 'area' %}{{ item.url }}.en{% else %}/en{{ item.url | remove_first: '/' }}{% endif %}{% endif %}{% endif %}">{{ site.data.translations[lang][item.id] }}</a>
                 </li>
                 {% endfor %}
             </ul>

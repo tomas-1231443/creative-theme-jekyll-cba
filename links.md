@@ -1,7 +1,7 @@
 ---
 layout: page
-translated_page_id: /links.pt
-lang: en
+translated_page_id: /links.en
+lang: pt
 title: Links
 #background_style: bg-info
 background_image: url('assets/img/backgrounds/image-from-rawpixel-id-1199650-jpeg.jpg')

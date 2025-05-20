@@ -1,16 +1,6 @@
 ---
 layout: login-page
-lang: en
-translated_page_id: /login.pt
-title: Login
-
-sections:
-- type: login-form.html
-  text: Log In
-  email: Email
-  password: Password
-  btn: Login
-  foot: Don't have an account yet?
-  signup: Sign Up
-
+translated_page_id: /login.en
+lang: pt
+title: Iniciar Sessão
 ---

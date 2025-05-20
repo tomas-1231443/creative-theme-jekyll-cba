@@ -5,8 +5,9 @@ en:
   history: "History"
   contacts: "Contacts"
   links: "Links"
+  area: "Reserved Area"
   switch_language: "🇵🇹"
-  switch_url: "/pt"
+  switch_url: "/"
 
 pt:
   about: "Sobre Nós"
@@ -15,5 +16,6 @@ pt:
   history: "História"
   contacts: "Contactos"
   links: "Links Úteis"
+  area: "Area Reservada"
   switch_language: "🇺🇸"
-  switch_url: "/"
+  switch_url: "/en"

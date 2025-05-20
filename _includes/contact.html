@@ -1,19 +1,48 @@
 <section id="{{ section.section_id }}" class="page-section {{ section.background_style }}">
   <div class="container px-4 px-lg-5">
+
+    <!-- Section Title and Text -->
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-lg-8 col-xl-6 text-center">
         <h2 class="mt-0">{{ section.title }}</h2>
         <hr class="divider border border-primary border-2">
-      <p class="text-muted mb-5">{{ section.text }}</p>
-    </div>
-    </div>
-    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-      {% for action in section.actions %}
-      <div class="col ml-auto text-center">
-        <i class="fs-1 {{ action.icon }} mb-3 text-muted"></i>
-        <a class="d-block" href="{{ action.url }}">{{ action.title }}</a>
+        <p class="text-muted mb-5">{{ section.text }}</p>
       </div>
-      {% endfor %}
     </div>
+
+    <!-- Social Icons and Email Button -->
+    <div class="row gx-4 gx-lg-5 justify-content-center mb-5 align-items-center">
+      
+      <!-- Left: Social Icons -->
+      <div class="col-md-5 d-flex justify-content-end align-items-center gap-4">
+        {% for action in section.actions %}
+          {% unless action.title == 'E-mail' or action.title contains '@' %}
+            <a href="{{ action.url }}" class="text-secondary fs-3" aria-label="{{ action.title }}">
+              <i class="bi {{ action.icon }}"></i>
+            </a>
+          {% endunless %}
+        {% endfor %}
+      </div>
+
+    <div class="col-md-1 d-none d-md-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center" style="height: 40px;">
+        <div style="width: 1px; height: 20px; background-color: var(--bs-primary);"></div>
+        <span class="mx-2 fw-bold text-primary" style="z-index: 1;">ou</span>
+        <div style="width: 1px; height: 20px; background-color: var(--bs-primary);"></div>
+      </div>
+    </div>
+
+      <!-- Right: Email Button -->
+      <div class="col-md-5 d-flex justify-content-start align-items-center">
+        {% for action in section.actions %}
+          {% if action.title == 'E-mail' or action.title contains '@' %}
+            <a href="{{ action.url }}" class="btn btn-outline-secondary px-4 py-2 fw-bold">
+              Enviar E-mail
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
   </div>
 </section>
