@@ -1,6 +1,7 @@
 ---
 layout: login-page
 lang: en
+login: true
 translated_page_id: /login
 title: Login
 

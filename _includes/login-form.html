@@ -1,13 +1,16 @@
-    <div class="limiter">
+    <div class="d-flex flex-column min-vh-100">
         <div class="container-login100">
+            <!-- In your login layout outside the login box -->
+            <div class="bubble bubble-left"></div>
+            <div class="bubble bubble-right"></div>
             <div class="wrap-login100">
                 <form class="login100-form validate-form">
-                    <span class="login100-form-title p-b-48">
-                        <img src="assets/img/icons/favicon.ico" alt="Company Logo" style="width: 100px; height: auto;">
-                    </span>
-                    <span class="login100-form-title p-b-26">
-                        {{ section.text }}
-                    </span>
+                    <div class="login-header d-flex align-items-center justify-content-center gap-3 mb-5">
+                        <img src="assets/img/cba-icon-preto.png" alt="Company Logo" style="width: 50px; height: auto;">
+                        <h2 class="mb-0" style="font-family: Poppins-Bold; color: #333;">
+                            {{ section.text }}
+                        </h2>
+                    </div>
                     <!-- <span class="login100-form-title p-b-48">
                         <i class="zmdi zmdi-font"></i>
                     </span> -->

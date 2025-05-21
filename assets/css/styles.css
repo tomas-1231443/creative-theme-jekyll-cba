@@ -2066,6 +2066,12 @@ progress {
   -webkit-overflow-scrolling: touch;
 }
 
+@media (max-width: 992px) {
+  .page-section h2.display-6 {
+    font-size: 1.75rem;
+  }
+}
+
 @media (max-width: 575.98px) {
   .table-responsive-sm {
     overflow-x: auto;
