@@ -8,15 +8,10 @@ en:
   copyright: "Created by"
   links: "Keep Exploring"
   area: "Reserved Area"
-  newsletter_title: "Stay in the Know"
-  newsletter_text: "To stay in the loop of The Inner Alignment, Co.'s workshops, offerings, and mindfulness tips, sign up for our Newsletter here!"
-  newsletter_placeholder: "Email Address"
   cta-header: "Boost Your Business Growth"
   cta-text: >
-    Join dozens of companies already growing with us.<br>
-    Get personalized insights, updates, and strategies delivered straight to your inbox — and take your business to the next level.
+    Get personalized insights, updates, and strategies to take your business to the next level.
   cta-button: "Let's Talk"
-  newsletter_button: "Sign Up"
   switch_language: "🇵🇹"
   switch_url: "/"
 
@@ -30,13 +25,9 @@ pt:
   copyright: "Criado por"
   links: "Continue a Explorar"
   area: "Área Reservada"
-  newsletter_title: "Receba as Novidades"
-  newsletter_text: "Receba dicas, atualizações e novidades diretamente no seu e-mail."
   cta-header: "Impulsione o Sucesso do Seu Negócio"
   cta-text: >
     Receba estratégias, novidades e conselhos personalizados para transformar o seu negócio.
   cta-button: "Vamos Conversar"
-  newsletter_placeholder: "O seu email"
-  newsletter_button: "Subscrever"
   switch_language: "🇺🇸"
   switch_url: "/en"

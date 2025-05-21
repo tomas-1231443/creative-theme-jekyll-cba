@@ -2,7 +2,7 @@
   <div class="container px-4 px-lg-5">
     {% assign lang = page.lang | default: site.lang %}
     {% assign page_id = page.translated_page_id | default: "/"%}
-    <a class="navbar-brand d-flex align-items-center" href="/">
+    <a class="navbar-brand d-flex align-items-center" href="{% if lang == 'pt' %}/#page-top{% else %}/en#page-top{% endif %}">
       <img src="/assets/img/cba-icon-preto.png" class="logo" alt="CBA Logo" />
       <span class="ms-2 text-dark">{{ site.title }}</span>
     </a>

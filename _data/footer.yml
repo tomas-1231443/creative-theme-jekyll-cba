@@ -4,10 +4,12 @@ links:
     url: 'https://sjmedia.pt'
     new_window: true
   - text: Terms & Conditions
-    url: '/terms'
+    url_pt: '/terms'
+    url_en: '/terms.en'
     new_window: false
   - text: Privacy Policy
-    url: '/privacy'
+    url_pt: '/privacy'
+    url_en: '/privacy.en'
     new_window: false
 
 navigation:

@@ -52,11 +52,12 @@
         </a>
       </div>
       <div class="col-md-6 text-md-end">
-        <a href="{{ site.data.footer.links[1].url }}"
+        {% assign lang = page.lang | default: site.lang %}
+        <a href="{% if lang == 'pt' %}{{ site.data.footer.links[1].url_pt }}{% else %}{{ site.data.footer.links[1].url_en }}{% endif %}"
           {% if site.data.footer.links[1].new_window %}target="_blank" rel="noopener"{% endif %}>
           {{ site.data.footer.links[1].text }}
         </a> |
-        <a href="{{ site.data.footer.links[2].url }}"
+        <a href="{% if lang == 'pt' %}{{ site.data.footer.links[2].url_pt }}{% else %}{{ site.data.footer.links[2].url_en }}{% endif %}"
           {% if site.data.footer.links[2].new_window %}target="_blank" rel="noopener"{% endif %}>
           {{ site.data.footer.links[2].text }}
         </a>
