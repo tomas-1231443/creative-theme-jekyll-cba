@@ -5,8 +5,9 @@ lang: pt
 header:
   title: Potenciamos o Seu Negócio
   text: >
-    Entregamos soluções inovadoras e personalizadas em Contabilidade, Estratégia Empresarial,
-    Recursos Humanos e Tecnologia. Na CBA, simplificamos a complexidade e ajudamo-lo a focar-se no que realmente importa.
+    Entregamos soluções inovadoras e personalizadas em Contabilidade, Estratégia Empresarial, Recursos Humanos e Tecnologia.<br\> 
+    
+    Na CBA, simplificamos a complexidade e ajudamo-lo a focar-se no que realmente importa.
   action:
     label: Descubra Mais
     url: '#services'

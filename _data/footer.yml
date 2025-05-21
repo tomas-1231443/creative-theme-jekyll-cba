@@ -1,5 +1,33 @@
-copyright: '&copy; Created by'
+copyright: '&copy;'
 links:
   - text: SJ Media
     url: 'https://sjmedia.pt'
     new_window: true
+  - text: Terms & Conditions
+    url: '/terms'
+    new_window: false
+  - text: Privacy Policy
+    url: '/privacy'
+    new_window: false
+
+navigation:
+  - id: about
+    url: '/#about'
+  - id: services
+    url: '/#services'
+  - id: members
+    url: '/#members'
+  - id: history
+    url: '/#timeline'
+  - id: contacts
+    url: '/#contacts'
+  - id: area
+    url: '#'
+
+social:
+  - icon: bi-instagram
+    url: '#'
+  - icon: bi-facebook
+    url: '#'
+  - icon: bi-youtube
+    url: '#'

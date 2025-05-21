@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3 border-bottom" id="mainNav">
+  <div class="container px-4 px-lg-5">
+    {% assign lang = page.lang | default: site.lang %}
+    {% assign page_id = page.translated_page_id | default: "/"%}
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="/assets/img/cba-icon-preto.png" class="logo" alt="CBA Logo" />
+      <span class="ms-2 text-dark">{{ site.title }}</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0">
+        {% for item in site.data.menus.header %}
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="{% if item.id == 'switch_language' %}{{ page_id }}{% else %}{% if lang == 'pt' %}{{ item.url }}{% else %}{% if item.id == 'area' %}{{ item.url }}.en{% else %}/en{{ item.url | remove_first: '/' }}{% endif %}{% endif %}{% endif %}">
+            {{ site.data.translations[page.lang][item.id] }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

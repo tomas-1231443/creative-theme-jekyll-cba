@@ -1,14 +1,66 @@
-<!-- no footer at all! -->
-<footer class="bg-light py-5">
+{% assign lang = page.lang | default: 'pt' %}
+
+<footer class="footer-gradient text-dark pt-5 pb-4">
   <div class="container px-4 px-lg-5">
-    <div class="small text-center text-muted">
-      {{ site.data.footer.copyright }}
-      &nbsp;
-      {% for link in site.data.footer.links %}
-          <a href="{{ link.url }}" {% assign new_window_is_not_empty = link.new_window | is_not_empty %}
-          {% if new_window_is_not_empty %}target="_blank" rel="noopener"
-          {% endif %}>{{ link.text }}</a>
-      {% endfor %} 
+    <div class="row text-start gx-5">
+      <div class="col-md-4 mb-4">
+        <!-- Navigation Section -->
+        <h5 class="fw-bold">{{ site.data.translations[lang]['links'] }}</h5>
+        <ul class="list-unstyled footer-nav">
+          {% for item in site.data.menus.header %}
+            {% unless item.id == 'switch_language' %}
+              <li>
+                <a href="{% if lang == 'pt' %}{{ item.url }}{% else %}{% if item.id == 'area' %}{{ item.url }}.en{% else %}/en{{ item.url | remove_first: '/' }}{% endif %}{% endif %}">
+                  {{ site.data.translations[lang][item.id] }}
+                </a>
+              </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <!-- Contact Section -->
+        <h5 class="fw-bold">{{ site.data.translations[lang]['contacts'] }}</h5>
+        <div class="footer-nav d-flex gap-3 fs-4">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <!-- CTA Section -->
+        <h5 class="fw-bold">{{ site.data.translations[lang]['cta-header'] }}</h5>
+        <p>{{ site.data.translations[lang]['cta-text'] }}</p>
+        <form class="d-flex flex-column flex-md-row gap-2">
+          <button type="submit" class="btn btn-outline-dark">{{ site.data.translations[lang]['cta-button'] }}</button>
+        </form>
+      </div>
+    </div>
+
+
+    <hr class="mt-5" />
+
+    <div class="row small text-muted mt-4">
+      <div class="col-md-6">
+        {{ site.data.footer.copyright }}
+        {{ site.data.translations[lang]['copyright'] }}
+        <a href="{{ site.data.footer.links[0].url }}"
+          {% if site.data.footer.links[0].new_window %}target="_blank" rel="noopener"{% endif %}>
+          {{ site.data.footer.links[0].text }}
+        </a>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="{{ site.data.footer.links[1].url }}"
+          {% if site.data.footer.links[1].new_window %}target="_blank" rel="noopener"{% endif %}>
+          {{ site.data.footer.links[1].text }}
+        </a> |
+        <a href="{{ site.data.footer.links[2].url }}"
+          {% if site.data.footer.links[2].new_window %}target="_blank" rel="noopener"{% endif %}>
+          {{ site.data.footer.links[2].text }}
+        </a>
+      </div>
     </div>
   </div>
 </footer>
