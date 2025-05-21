@@ -11,6 +11,7 @@ languages: ["en", "pt"] # Supported languages
 # Build settings
 markdown: kramdown
 sass:
+  sass_dir: _sass
   indentWidth: 4
   style: compressed
   precision: 10

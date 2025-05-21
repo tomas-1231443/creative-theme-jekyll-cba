@@ -10,6 +10,8 @@ RUN mv ./GemfileDocker ./Gemfile
 
 RUN bundle install
 
+RUN bundle exec jekyll build
+
 EXPOSE 4000
 
-CMD ["jekyll", "serve", "--host", "0.0.0.0", "--watch", "--force_polling"]
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
