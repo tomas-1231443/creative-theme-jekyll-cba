@@ -10,7 +10,7 @@
           {% for item in site.data.menus.header %}
             {% unless item.id == 'switch_language' %}
               <li>
-                <a href="{% if lang == 'pt' %}{{ item.url }}{% else %}{% if item.id == 'area' %}{{ item.url }}.en{% else %}/en{{ item.url | remove_first: '/' }}{% endif %}{% endif %}">
+                <a href="{% if lang == 'pt' %}{{ item.url }}{% else %}{% if item.id == 'area' or item.id == 'contact' %}{{ item.url }}.en{% else %}/en{{ item.url | remove_first: '/' }}{% endif %}{% endif %}">
                   {{ site.data.translations[lang][item.id] }}
                 </a>
               </li>

@@ -9,5 +9,7 @@ header:
   url: /#services
 - id: area
   url: /login
+- id: contact
+  url: /contact
 - id: switch_language
   url: /pt
