@@ -1,17 +1,16 @@
+FROM ruby:3.2
 
-FROM jekyll/jekyll:4.2.2
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
 
-WORKDIR /srv/jekyll
+WORKDIR /usr/src/app
+
+COPY ./Gemfile ./Gemfile
+
+RUN gem install bundler && bundle install
 
 COPY . .
-RUN rm Gemfile.lock
-RUN rm Gemfile
-RUN mv ./GemfileDocker ./Gemfile
-
-RUN bundle install
-
-RUN bundle exec jekyll build
 
 EXPOSE 4000
 
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
+
