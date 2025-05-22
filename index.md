@@ -43,21 +43,17 @@ sections:
         icon_class: text-success
     actions:
       - title: Saiba Mais!
-        url: '#contacts'
+        url: '/services'
         class: btn-dark
-
-  # - type: aside.html
-  #   background_style: bg-info
-  #   title: Nao sei
 
   - type: two-cta.html
     section_id: cta
     background_style: bg-primary text-white
     left_text: Quer fazer crescer o seu negócio?
     left_button_text: Fale Connosco
-    left_button_url: "#contacts"
+    left_button_url: "/contact"
 
     right_text: Precisa de tempo para crescer?
     right_button_text: Descubra Como
-    right_button_url: "#services"    
+    right_button_url: "/services"    
 ---

@@ -6,7 +6,7 @@ header:
 - id: about
   url: /#
 - id: services
-  url: /#services
+  url: /services
 - id: area
   url: /login
 - id: contact

@@ -1,0 +1,21 @@
+{% for service in section.services %}
+<section class="service-block">
+  <div class="container">
+    {% assign i = forloop.index | modulo: 2 %}
+    <div class="service-container {% if i == 1 %}reverse{% endif %}">
+      <div class="service-image">
+        <div class="service-blob"></div>
+        <img src="{{ service.image | relative_url }}" alt="{{ service.title }}">
+      </div>
+      <div class="service-text">
+        <small class="service-label">{{ service.label }}</small>
+        <h2>{{ service.title }}</h2>
+        <div class="service-copy">{{ service.description | markdownify}}</div>
+        {% if service.link %}
+          <a href="{{ service.link }}" class="service-link">Saiba Mais →</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}

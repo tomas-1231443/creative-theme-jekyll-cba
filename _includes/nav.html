@@ -12,7 +12,7 @@
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
                 {% for item in site.data.menus.header  %}
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="{% if item.id == 'switch_language' %}{{ page_id }}{% else %}{% if lang == 'pt' %}{{ item.url }}{% else %}{% if item.id == 'area' or item.id == 'contact' %}{{ item.url }}.en{% else %}/en{{ item.url | remove_first: '/' }}{% endif %}{% endif %}{% endif %}">{{ site.data.translations[lang][item.id] }}</a>
+                    <a class="nav-link js-scroll-trigger" href="{% if item.id == 'switch_language' %}{{ page_id }}{% else %}{% if lang == 'pt' %}{{ item.url }}{% else %}{% if item.id == 'area' or item.id == 'contact' or item.id == 'services' %}{{ item.url }}.en{% else %}/en{{ item.url | remove_first: '/' }}{% endif %}{% endif %}{% endif %}">{{ site.data.translations[lang][item.id] }}</a>
                 </li>
                 {% endfor %}
             </ul>

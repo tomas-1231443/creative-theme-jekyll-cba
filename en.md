@@ -42,21 +42,17 @@ sections:
         icon_class: text-success
     actions:
       - title: Learn More!
-        url: '#contacts'
+        url: '/services.en'
         class: btn-dark
-
-  # - type: aside.html
-  #   background_style: bg-info
-  #   title: Nao sei
 
   - type: two-cta.html
     section_id: cta
     background_style: bg-primary text-white
     left_text: Want to grow your business?
     left_button_text: Talk to Us
-    left_button_url: "#contacts"
+    left_button_url: "/contact.en"
 
     right_text: Need time to grow?
     right_button_text: Discover How
-    right_button_url: "#services"    
+    right_button_url: "/services.en"    
 ---

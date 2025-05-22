@@ -24,6 +24,7 @@
         <link href="assets/css/styles.css" rel="stylesheet" />
         <!-- Custom CSS -->
         <link href="assets/css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/assets/css/services.css' | relative_url }}">
         {% assign page_type = page.login | default: false %}
         {% if page_type %}
         <link rel="stylesheet" type="text/css" href="assets/css/main_login.css">
